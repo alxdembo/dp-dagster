@@ -1,4 +1,6 @@
-# Fully Featured Project Example [UNMAINTAINED]
+# Part of data platform boilerplate code
+
+# Dagster project example
 
 If you're interested in seeing an up-to-date and maintained example of a Dagster project, see our [Dagster Open Platform](https://github.com/dagster-io/dagster-open-platform)
 
