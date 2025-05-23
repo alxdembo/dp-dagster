@@ -1,5 +1,13 @@
 # Part of data platform boilerplate code
 
+Repository structure
+
+```mermaid
+graph TD;
+    Containerisation_config-->Orchestrator;
+    Orchestrator-->Data_transformation_framework;
+```
+
 # Dagster project example
 
 If you're interested in seeing an up-to-date and maintained example of a Dagster project, see our [Dagster Open Platform](https://github.com/dagster-io/dagster-open-platform)
@@ -13,8 +21,6 @@ This is meant to be a full "realistic" demo of Dagster, that takes advantage of 
 - Resources
 - dbt, S3, and PySpark integrations
 - Lightweight invocation in unit tests
-
-View this example in the Dagster docs at [Fully Featured Project](https://docs.dagster.io/guides/dagster/example_project).
 
 ## Getting started
 
@@ -33,7 +39,7 @@ pip install -e ".[dev]"
 Once you've done this, you can run:
 
 ```
-dagster-webserver
+dagster dev
 ```
 
 to view this example in Dagster's UI.
