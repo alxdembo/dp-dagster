@@ -7,8 +7,8 @@ from dagster_dbt import DbtCliResource
 from dagster_pyspark import pyspark_resource
 
 from .assets import activity_analytics, core, dbt, recommender
-from .constants import ACTIVITY_ANALYTICS, CORE, RECOMMENDER
-from .jobs import activity_analytics_assets_sensor, core_assets_schedule, recommender_assets_sensor
+from .jobs import activity_analytics_assets_sensor, core_assets_schedule, recommender_assets_sensor, CORE, RECOMMENDER, \
+    ACTIVITY_ANALYTICS
 from .project import DBT_PROJECT_DIR, dbt_project
 from .resources.duckdb_parquet_io_manager import DuckDBPartitionedParquetIOManager
 from .resources.hn_resource import HNAPIClient, HNAPISubsampleClient
@@ -18,6 +18,7 @@ from .resources.parquet_io_manager import (
 )
 from .resources.snowflake_io_manager import SnowflakeIOManager
 from .sensors.slack_on_failure_sensor import make_slack_on_failure_sensor
+
 
 core_assets = load_assets_from_package_module(core, group_name=CORE)
 
@@ -50,7 +51,6 @@ dbt_prod_resource = DbtCliResource(
     project_dir=dbt_project,
     target="prod",
 )
-
 
 configured_pyspark = pyspark_resource.configured(
     {
@@ -90,7 +90,6 @@ RESOURCES_PROD = {
     "dbt": dbt_prod_resource,
 }
 
-
 RESOURCES_STAGING = {
     "io_manager": S3PickleIOManager(
         s3_resource=S3Resource.configure_at_launch(),
@@ -104,7 +103,6 @@ RESOURCES_STAGING = {
     "dbt": dbt_staging_resource,
 }
 
-
 RESOURCES_LOCAL = {
     "parquet_io_manager": LocalPartitionedParquetIOManager(pyspark=configured_pyspark),
     "warehouse_io_manager": DuckDBPartitionedParquetIOManager(
@@ -114,7 +112,6 @@ RESOURCES_LOCAL = {
     "hn_client": HNAPIClient(),
     "dbt": dbt_local_resource,
 }
-
 
 resources_by_deployment_name = {
     "prod": RESOURCES_PROD,

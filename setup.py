@@ -36,5 +36,8 @@ setup(
         "sqlalchemy!=1.4.42",  # workaround for https://github.com/snowflakedb/snowflake-sqlalchemy/issues/350
         "snowflake-sqlalchemy<1.5.2",
     ],
-    extras_require={"dev": ["dagster-webserver", "pytest"], "tests": ["mypy", "pylint", "pytest"]},
+    extras_require={
+        "dev": ["dagster-webserver", "pytest"],
+        "tests": ["mypy", "pylint", "pytest"],
+    },
 )

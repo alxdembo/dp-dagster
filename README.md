@@ -4,8 +4,8 @@ Repository structure
 
 ```mermaid
 graph TD;
-    Containerisation_config-->Orchestrator;
-    Orchestrator-->Data_transformation_framework;
+    Containerisation_config-->dagster;
+    dagster-->dbt;
 ```
 
 # Dagster project example
@@ -34,6 +34,7 @@ To install this example and its Python dependencies, run:
 
 ```bash
 pip install -e ".[dev]"
+pip install -e ../dp-dbt
 ```
 
 Once you've done this, you can run:
