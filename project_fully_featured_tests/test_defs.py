@@ -1,4 +1,4 @@
-from project_fully_featured.definitions import defs
+from sample_project.definitions import defs
 
 
 def test_defs_can_load():

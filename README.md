@@ -27,7 +27,7 @@ This is meant to be a full "realistic" demo of Dagster, that takes advantage of 
 Bootstrap your own Dagster project with this example:
 
 ```bash
-dagster project from-example --name my-dagster-project --example project_fully_featured
+dagster project from-example --name my-dagster-project --example sample_project
 ```
 
 To install this example and its Python dependencies, run:

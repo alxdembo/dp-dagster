@@ -9,9 +9,9 @@ from dagster import (
 )
 from dagster_pyspark import pyspark_resource
 
-from project_fully_featured.assets import core
-from project_fully_featured.resources.hn_resource import HNSnapshotClient
-from project_fully_featured.resources.parquet_io_manager import LocalPartitionedParquetIOManager
+from sample_project.assets import core
+from sample_project.resources.hn_resource import HNSnapshotClient
+from sample_project.resources.parquet_io_manager import LocalPartitionedParquetIOManager
 
 
 def test_download():

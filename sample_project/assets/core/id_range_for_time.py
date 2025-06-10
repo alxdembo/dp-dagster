@@ -7,7 +7,7 @@ from dagster import (
     _check as check,
 )
 
-from project_fully_featured.resources.hn_resource import HNClient
+from sample_project.resources.hn_resource import HNClient
 
 
 def binary_search_nearest_left(get_value, start, end, min_target):

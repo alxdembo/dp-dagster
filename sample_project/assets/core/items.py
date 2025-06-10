@@ -3,8 +3,8 @@ from pandas import DataFrame
 from pyspark.sql import DataFrame as SparkDF
 from pyspark.sql.types import ArrayType, DoubleType, LongType, StringType, StructField, StructType
 
-from project_fully_featured.jobs import hourly_partitions
-from project_fully_featured.resources.hn_resource import HNClient
+from sample_project.jobs import hourly_partitions
+from sample_project.resources.hn_resource import HNClient
 
 from .id_range_for_time import id_range_for_time
 

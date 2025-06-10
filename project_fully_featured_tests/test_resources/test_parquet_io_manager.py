@@ -6,8 +6,8 @@ from dagster import asset, materialize
 from dagster_pyspark import pyspark_resource
 from pyspark.sql import DataFrame as SparkDF
 
-from project_fully_featured.definitions import hourly_partitions
-from project_fully_featured.resources.parquet_io_manager import LocalPartitionedParquetIOManager
+from sample_project.definitions import hourly_partitions
+from sample_project.resources.parquet_io_manager import LocalPartitionedParquetIOManager
 
 
 def test_io_manager():

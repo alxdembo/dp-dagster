@@ -1,7 +1,7 @@
 from setuptools import find_packages, setup
 
 setup(
-    name="project_fully_featured",
+    name="sample_project",
     version="1!0+dev",
     author="Dagster Labs",
     author_email="hello@dagsterlabs.com",
@@ -11,7 +11,7 @@ setup(
         "Operating System :: OS Independent",
     ],
     packages=find_packages(exclude=["test"]),
-    package_data={"project_fully_featured": ["hacker_news_dbt/*"]},
+    package_data={"sample_project": ["hacker_news_dbt/*"]},
     install_requires=[
         "aiobotocore",
         "dagster",
